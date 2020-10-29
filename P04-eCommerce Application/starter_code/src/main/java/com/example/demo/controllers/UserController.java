@@ -58,7 +58,7 @@ public class UserController {
         user.setPassword(BCrypt.hashpw(createUserRequest.getPassword(), salt));
         user.setSalt(salt);
         userRepository.save(user);
-        logger.info("new user created with name: {}", user.getUsername());
+        logger.info("new user created with name: {}.", user.getUsername());
         return ResponseEntity.ok(user);
     }
 
