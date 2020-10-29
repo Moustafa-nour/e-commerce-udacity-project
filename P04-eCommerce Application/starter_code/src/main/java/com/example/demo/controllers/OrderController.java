@@ -33,7 +33,7 @@ public class OrderController {
         }
         UserOrder order = UserOrder.createFromCart(user.getCart());
         orderRepository.save(order);
-        logger.info("items submitted for: {}", user.getUsername() );
+        logger.info("items submitted for: {}.", user.getUsername() );
         return ResponseEntity.ok(order);
     }
 
