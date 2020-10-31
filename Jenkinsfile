@@ -1,5 +1,5 @@
 pipeline {
-    agent maven
+    agent none
    stages {
         stage('build') {
             steps {
